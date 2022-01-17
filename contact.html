@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Test Site | Contact</title>
+    <link rel="icon" href="./images/testsite.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e04d25e1ed.js" crossorigin="anonymous"></script>
+</head>
+  <body>
+
+    <header>
+      <div class="container">
+        <div id="title">
+          <h1>
+            <a href="javascript: void(0);" class="menu-button" onclick="toggleMenu()"><span><i class="fas fa-bars"></i></span></a>
+            <a href="index.html"><span><i class="fas fa-vial"></i></span><span> T</span><span>e</span><span>s</span><span>t </span><span>S</span><span>i</span><span>t</span><span>e</span></a>
+          </h1>
+        </div>
+        <nav id="nav-buttons">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="underline">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="content">
+      <div class="container">
+        <div class="main-container">
+          <article id="main-col">
+            <h1>Contact Me</h1>
+            <p>Fill out the form below for any questions, comments, and concerns.</p>
+            <small style="font-weight: 500"><span style="color: var(--red)">✱ </span>All fields are required</small>
+            <br>
+            <br>
+            <form>
+              <input class="text-box" id="fname" type="text" placeholder="First Name" required>
+              <input class="text-box" id="lname" type="text" placeholder="Last Name" required>
+              <input class="text-box" id="company" type="text" placeholder="Company" required>
+              <input class="text-box" id="city" type="text" placeholder="City" required>
+              <input class="text-box" id="state" type="text" placeholder="State" required>
+              <input class="text-box" id="zip" type="text" placeholder="Zip Code" required>
+              <input class="text-box" id="address" type="text" placeholder="Address" required>
+              <input class="text-box" id="phone" type="text" placeholder="Phone Number" required>
+              <input class="text-box" id="email" type="email" placeholder="Email" required>
+              <input class="text-box" id="subject" type="text" placeholder="Subject" required>
+              <textarea id="message" type="text" placeholder="Message" oninput='this.style.height = ""; this.style.height = this.scrollHeight + "px"' required></textarea>
+              <button class="button" type="submit">Submit</button>
+            </form>
+          </article>
+        </div>
+        <div class="sidebar-container">
+          <aside id="sidebar">
+            <h1>Word of the Day</h1>
+            <div id="word">
+              <span>bruh</span>
+              <div id="audio-button" onclick="playAudio()">
+                <i class="fas fa-volume-up"></i>
+              </div>
+              <br>
+              <i>interjection</i>
+              <ol>
+                <li id="definition">the word you say when someone says something stupid</li>
+                <div id="example">
+                  <i>
+                    friend: "darren is not gay"
+                    <br>
+                    you: "bruh"
+                  </i>
+                </div>
+                <li id="definition">the best response to anything</li>
+                <div id="example">
+                  <i>
+                    friend: "i have covid"
+                    <br>
+                    you: "bruh"
+                  </i>
+                </div>
+              </ol>
+
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Jianing Wang &copy; Copyright 2021. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+
+  </body>
+</html>

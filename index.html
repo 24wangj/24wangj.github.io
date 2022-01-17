@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Test Site | Home</title>
+    <link rel="icon" href="./images/testsite.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e04d25e1ed.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <div id="title">
+          <h1>
+            <a href="javascript: void(0);" class="menu-button" onclick="toggleMenu()"><span><i class="fas fa-bars"></i></span></a>
+            <a href="index.html"><span><i class="fas fa-vial"></i></span><span> T</span><span>e</span><span>s</span><span>t </span><span>S</span><span>i</span><span>t</span><span>e</span></a>
+          </h1>
+        </div>
+        <nav id="nav-buttons">
+          <ul>
+            <li><a href="index.html" class="underline">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="content">
+      <div class="container">
+        <div class="main-container">
+          <article id="main-col">
+            <a href="./images/StarlitValley.png" target="_blank"><div id="article-photo" style="background-image: url('./images/StarlitValley.png')">
+              <p id="article-photo-text">CLICK TO VIEW</p>
+            </div></a>
+            <h1>Welcome!</h1>
+            <p>Welcome to my site!</p>
+          </article>
+        </div>
+        <div class="sidebar-container">
+          <aside id="sidebar">
+            <h1>Subscribe</h1>
+            <p>Enter your email, phone number, and SSN below to subscribe to Test Site.</p>
+            <form>
+              <input class="text-box" type="email" placeholder="Email" required>
+              <input class="text-box" type="phone" placeholder="Phone Number" required>
+              <input class="text-box" type="text" placeholder="SSN" required>
+              <button class="button" type="submit">Subcribe</button>
+            </form>
+          </aside>
+          <aside id="sidebar">
+            <h1>Poll</h1>
+            <p>Hi</p>
+            <form>
+              <input type="radio" name="choice" id="choice1">
+              <label for="choice1">Hi</label>
+              <input type="radio" name="choice" id="choice2">
+              <label for="choice2">Hello</label>
+              <input type="radio" name="choice" id="choice3">
+              <label for="choice3">Goodbye!</label>
+              <button type="submit" class="button">Submit</button>
+            </form>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Jianing Wang &copy; Copyright 2021. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+
+  </body>
+</html>

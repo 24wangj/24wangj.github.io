@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Test Site | Shop</title>
+    <link rel="icon" href="../images/testsite.png">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/e04d25e1ed.js" crossorigin="anonymous"></script>
+  </head>
+  <body id="cart">
+
+    <header>
+      <div class="container">
+        <div id="title">
+          <h1>
+            <a href="javascript: void(0);" class="menu-button" onclick="toggleMenu()"><span><i class="fas fa-bars"></i></span></a>
+            <a href="../index.html"><span><i class="fas fa-vial"></i></span><span> T</span><span>e</span><span>s</span><span>t </span><span>S</span><span>i</span><span>t</span><span>e</span></a>
+          </h1>
+        </div>
+        <nav id="nav-buttons">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../shop.html" class="underline">Shop</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="content">
+      <div class="container">
+        <div class="main-container">
+          <article id="main-col">
+            <p class="cart-return-button-container"><button class="return-button cart-return-button" type="submit" onclick="history.back()"><i class="fas fa-angle-left"></i> Back</button></p>
+            <h1>Shopping Cart</h1>
+            <!-- DARREN -->
+            <div class="cart-item" id="cart-darren">
+              <div class="cart-item-photo" style="background-image: url(../images/darrenli.jpg)"></div>
+              <div class="cart-item-description">
+                <h1 class="cart-item-name">Darren</h1>
+                <p>Quantity</p>
+                <div class="quantity-counter">
+                  <button class="increment-button decrease quantity-darren" type="button" onclick="decrementQuantity('darren'); saveCartQuantity('darren'); updateCartCost('darren'); updateTotalCost()"><i class="fas fa-minus"></i></button>
+                  <input class="quantity quantity-darren" id="quantity-darren" type="number" min="1" oninput="saveCartQuantity('darren'); updateCartCost('darren'); updateTotalCost()">
+                  <button class="increment-button increase quantity-darren" type="button" onclick="incrementQuantity('darren'); saveCartQuantity('darren'); updateCartCost('darren'); updateTotalCost()"><i class="fas fa-plus"></i></button>
+                </div>
+                <button class="trash-button" type="button" onclick="trashItem('darren'); updateTotalCost()"><i class="fas fa-trash"></i></button>
+              </div>
+              <div class="cart-item-price-container">
+                <p>Price</p>
+                <h1><span>$</span><span class="cart-item-price" id="cost-darren">0.00</h1>
+              </div>
+            </div>
+            <!-- HANK -->
+            <div class="cart-item" id="cart-hank">
+              <div class="cart-item-photo" style="background-image: url(../images/hank.jpg)"></div>
+              <div class="cart-item-description">
+                <h1 class="cart-item-name">Hank</h1>
+                <p>Quantity</p>
+                <div class="quantity-counter">
+                  <button class="increment-button decrease quantity-hank" type="button" onclick="decrementQuantity('hank'); saveCartQuantity('hank'); updateCartCost('hank'); updateTotalCost()"><i class="fas fa-minus"></i></button>
+                  <input class="quantity quantity-hank" id="quantity-hank" type="number" min="1" oninput="saveCartQuantity('hank'); updateCartCost('hank'); updateTotalCost()">
+                  <button class="increment-button increase quantity-hank" type="button" onclick="incrementQuantity('hank'); saveCartQuantity('hank'); updateCartCost('hank'); updateTotalCost()"><i class="fas fa-plus"></i></button>
+                </div>
+                <button class="trash-button" type="button" onclick="trashItem('hank'); updateTotalCost()"><i class="fas fa-trash"></i></button>
+              </div>
+              <div class="cart-item-price-container">
+                <p>Price</p>
+                <h1><span>$</span><span class="cart-item-price" id="cost-hank">0.00</h1>
+              </div>
+            </div>
+            <!-- PREETHAM -->
+            <div class="cart-item" id="cart-preetham">
+              <div class="cart-item-photo" style="background-image: url(../images/sweetham.jpeg)"></div>
+              <div class="cart-item-description">
+                <h1 class="cart-item-name">Preetham</h1>
+                <p>Quantity</p>
+                <div class="quantity-counter">
+                  <button class="increment-button decrease quantity-preetham" type="button" onclick="decrementQuantity('preetham'); saveCartQuantity('preetham'); updateCartCost('preetham'); updateTotalCost()"><i class="fas fa-minus"></i></button>
+                  <input class="quantity quantity-preetham" id="quantity-preetham" type="number" min="1" oninput="saveCartQuantity('preetham'); updateCartCost('preetham'); updateTotalCost()">
+                  <button class="increment-button increase quantity-preetham" type="button" onclick="incrementQuantity('preetham'); saveCartQuantity('preetham'); updateCartCost('preetham'); updateTotalCost()"><i class="fas fa-plus"></i></button>
+                </div>
+                <button class="trash-button" type="button" onclick="trashItem('preetham'); updateTotalCost()"><i class="fas fa-trash"></i></button>
+              </div>
+              <div class="cart-item-price-container">
+                <p>Price</p>
+                <h1><span>$</span><span class="cart-item-price" id="cost-preetham">0.00</h1>
+              </div>
+            </div>
+            <!-- VIGNESH -->
+            <div class="cart-item" id="cart-vignesh">
+              <div class="cart-item-photo" style="background-image: url(../images/Vignesh.jpeg)"></div>
+              <div class="cart-item-description">
+                <h1 class="cart-item-name">Vignesh</h1>
+                <p>Quantity</p>
+                <div class="quantity-counter">
+                  <button class="increment-button decrease quantity-vignesh" type="button" onclick="decrementQuantity('vignesh'); saveCartQuantity('vignesh'); updateCartCost('vignesh'); updateTotalCost()"><i class="fas fa-minus"></i></button>
+                  <input class="quantity quantity-vignesh" id="quantity-vignesh" type="number" min="1" oninput="saveCartQuantity('vignesh'); updateCartCost('vignesh'); updateTotalCost()">
+                  <button class="increment-button increase quantity-vignesh" type="button" onclick="incrementQuantity('vignesh'); saveCartQuantity('vignesh'); updateCartCost('vignesh'); updateTotalCost()"><i class="fas fa-plus"></i></button>
+                </div>
+                <button class="trash-button" type="button" onclick="trashItem('vignesh'); updateTotalCost()"><i class="fas fa-trash"></i></button>
+              </div>
+              <div class="cart-item-price-container">
+                <p>Price</p>
+                <h1><span>$</span><span class="cart-item-price" id="cost-vignesh">0.00</h1>
+              </div>
+            </div>
+            <!-- BOMB -->
+            <div class="cart-item" id="cart-bomb">
+              <div class="cart-item-photo" style="background-image: url(../images/bomb.jpg)"></div>
+              <div class="cart-item-description">
+                <h1 class="cart-item-name">Bomb</h1>
+                <p>Quantity</p>
+                <div class="quantity-counter">
+                  <button class="increment-button decrease quantity-bomb" type="button" onclick="decrementQuantity('bomb'); saveCartQuantity('bomb'); updateCartCost('bomb'); updateTotalCost()"><i class="fas fa-minus"></i></button>
+                  <input class="quantity quantity-bomb" id="quantity-bomb" type="number" min="1" oninput="saveCartQuantity(); updateCartCost('bomb'); updateTotalCost()">
+                  <button class="increment-button increase quantity-bomb" type="button" onclick="incrementQuantity('bomb'); saveCartQuantity('bomb'); updateCartCost('bomb'); updateTotalCost()"><i class="fas fa-plus"></i></button>
+                </div>
+                <button class="trash-button" type="button" onclick="trashItem('bomb'); updateTotalCost()"><i class="fas fa-trash"></i></button>
+              </div>
+              <div class="cart-item-price-container">
+                <p>Price</p>
+                <h1><span>$</span><span class="cart-item-price" id="cost-bomb">0.00</h1>
+              </div>
+            </div>
+            <!-- FLASH -->
+            <div class="cart-item" id="cart-flash">
+              <div class="cart-item-photo" style="background-image: url(../images/flash.jpg)"></div>
+              <div class="cart-item-description">
+                <h1 class="cart-item-name">Flash</h1>
+                <p>Quantity</p>
+                <div class="quantity-counter">
+                  <button class="increment-button decrease quantity-flash" type="button" onclick="decrementQuantity('flash'); saveCartQuantity('flash'); updateCartCost('flash'); updateTotalCost()"><i class="fas fa-minus"></i></button>
+                  <input class="quantity quantity-flash" id="quantity-flash" type="number" min="1" oninput="saveCartQuantity(); updateCartCost('flash'); updateTotalCost()">
+                  <button class="increment-button increase quantity-flash" type="button" onclick="incrementQuantity('flash'); saveCartQuantity('flash'); updateCartCost('flash'); updateTotalCost()"><i class="fas fa-plus"></i></button>
+                </div>
+                <button class="trash-button" type="button" onclick="trashItem('flash'); updateTotalCost()"><i class="fas fa-trash"></i></button>
+              </div>
+              <div class="cart-item-price-container">
+                <p>Price</p>
+                <h1><span>$</span><span class="cart-item-price" id="cost-flash">0.00</h1>
+              </div>
+            </div>
+            <div id="cart-empty">
+              <p>Your cart is empty</p>
+            </div>
+          </article>
+        </div>
+        <div class="sidebar-container">
+          <aside id="sidebar">
+            <h1>Address <i class="fas fa-map-marker-alt"></i></h1>
+            <form id="address-form">
+              <input class="text-box" type="text" placeholder="Name">
+              <input class="text-box" type="text" placeholder="Street">
+              <input class="text-box" id="city" type="text" placeholder="City">
+              <input class="text-box" id="state" type="text" placeholder="State">
+              <input class="text-box" id="zip" type="text" placeholder="Zip Code">
+              <input class="text-box" id="country" type="text" placeholder="Country">
+            </form>
+          </aside>
+          <aside id="sidebar">
+            <h1>Shipping Method</h1>
+            <form>
+              <input type="radio" name="shipping" id="free-shipping" onclick="updateTotalCost()">
+              <label for="free-shipping"><i class="fas fa-truck"></i> Free Shipping +0.00</label>
+              <input type="radio" name="shipping" id="fast-delivery" onclick="updateTotalCost()">
+              <label for="fast-delivery"><i class="fas fa-plane"></i> 1 Hour Delivery +$69.00</label>
+            </form>
+          </aside>
+          <aside id="sidebar">
+            <h1>Order Summary</h1>
+            <div id="order-summary">
+              <p>Subtotal<span class="order-summary-costs">$<span id="subtotal">0.00</span></span></p>
+              <p>Shipping<span class="order-summary-costs">$<span id="shipping">0.00</span></span></p>
+              <p>Tax<span class="order-summary-costs">$<span id="tax">0.00</span></span></p>
+            </div>
+            <hr>
+            <p>Total<span id="order-summary-total">$<span id="total">0.00</span></span></p>
+          </aside>
+          <aside id="sidebar">
+            <h1>Payment Method</h1>
+            <form id="payment-form" action="./orderplaced.html">
+              <input type="radio" name="payment" id="card" onclick="displayCardInfo()">
+              <label for="card"><i class="far fa-credit-card"></i> Debit / Credit Card</label>
+              <div id="card-info">
+                <input class="text-box" id="card-number" type="number" placeholder="Card Number">
+                <input class="text-box" id="exp-date" type="number" placeholder="Expiration Date">
+                <input class="text-box" id="cvc" type="number" placeholder="CVC">
+              </div>
+              <input type="radio" name="payment" id="paypal" onclick=displayPayPalInfo()>
+              <label for="paypal"><i class="fab fa-paypal"></i> PayPal</label>
+              <div id="paypal-info">
+                <input class="text-box" id="paypal-email" type="email" placeholder="Email">
+                <input class="text-box" id="paypal-password" type="number" placeholder="Password">
+              </div>
+              <button class="button" type="submit" onclick="clearQuantity()">Place Order</button>
+            </form>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Jianing Wang &copy; Copyright 2021. All rights reserved.</p>
+    </footer>
+
+    <script src="../main.js"></script>
+
+  </body>
+</html>

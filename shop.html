@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Test Site | Shop</title>
+    <link rel="icon" href="./images/testsite.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e04d25e1ed.js" crossorigin="anonymous"></script>
+  </head>
+  <body onresize="displayBarrier()" class="hasShopItems">
+
+    <header>
+      <div class="container">
+        <div id="title">
+          <h1>
+            <a href="javascript: void(0);" class="menu-button" onclick="toggleMenu()"><span><i class="fas fa-bars"></i></span></a>
+            <a href="index.html"><span><i class="fas fa-vial"></i></span><span> T</span><span>e</span><span>s</span><span>t </span><span>S</span><span>i</span><span>t</span><span>e</span></a>
+          </h1>
+        </div>
+        <nav id="nav-buttons">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html" class="underline">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="content">
+      <div class="container">
+        <div class="shop-sidebar-container">
+          <aside id="sidebar">
+            <form action="./shop/cart.html">
+              <button class="button" id="cart-button" type="submit"><i class="fas fa-shopping-cart"></i> Cart</button>
+            </form>
+            <h1>Categories</h1>
+            <ul id="shop-categories">
+              <li><a href="./shop.html" class="sideline">All</a></li>
+              <li><a href="./shop/people.html">People</a></li>
+              <li><a href="./shop/weapons.html">Weapons</a></li>
+            </ul>
+          </aside>
+        </div>
+          <div class="shop-main-container">
+          <article id="main-col">
+            <form id="search-form">
+              <button type="submit" disabled style="display: none" aria-hidden="true"></button>
+              <button id="search-button" type="button" onclick="searchShop()"><i class="fas fa-search"></i></button>
+              <button id="x-button" type="button" onclick="clearSearch()"><i class="fas fa-times"></i></button>
+              <div id="search-bar-container">
+                <input id="search-bar" type="text" placeholder="Search" onkeyup="enterSearch()">
+              </div>
+            </form>
+            <div class="shop-item-container">
+              <!-- PEOPLE -->
+              <div class="shop-item">
+                <div class="shop-item-photo" style="background-image: url('./images/darrenli.jpg')"></div>
+                <p class="shop-item-text">Darren</p>
+                <div class="stars">
+                  <i class="fas fa-star star-highlight"></i><i class="fas fa-star star-highlight"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p><a href="./shop/people.html" class="category-label">People</a></p>
+                <h1>$0.69</h1>
+                <div class="sale percentage">
+                  50% OFF
+                </div>
+                <a href="./shop/people/darren.html"><button class="button">Buy</button></a>
+              </div>
+              <div class="shop-item">
+                <div class="shop-item-photo" style="background-image: url('./images/hank.jpg')"></div>
+                <p class="shop-item-text">Hank</p>
+                <div class="stars">
+                  <i class="fas fa-star star-highlight"></i><i class="fas fa-star star-highlight"></i><i class="fas fa-star star-highlight"></i><i class="fas fa-star star-highlight"></i><i class="fas fa-star"></i>
+                </div>
+                <p><a href="./shop/people.html" class="category-label">People</a></p>
+                <h1>$21.99</h1>
+                <a href="./shop/people/hank.html"><button class="button">Buy</button></a>
+              </div>
+              <div class="shop-item">
+                <div class="shop-item-photo" style="background-image: url('./images/sweetham.jpeg')"></div>
+                <p class="shop-item-text">Preetham</p>
+                <div class="stars">
+                  <i class="fas fa-star star-highlight"></i><i class="fas fa-star star-highlight"></i><i class="fas fa-star star-highlight"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p><a href="./shop/people.html" class="category-label">People</a></p>
+                <h1>$4.20</h1>
+                <a href="./shop/people/preetham.html"><button class="button">Buy</button></a>
+              </div>
+              <div class="shop-item">
+                <div class="shop-item-photo" style="background-image: url('./images/Vignesh.jpeg')"></div>
+                <p class="shop-item-text">Vignesh</p>
+                <div class="stars star-highlight">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p><a href="./shop/people.html" class="category-label">People</a></p>
+                <h1>$0.00</h1>
+                <div class="sale black-friday">
+                  BLACK FRIDAY SALE
+                </div>
+                <a href="./shop/people/vignesh.html"><button class="button" type="submit">Buy</button></a>
+              </div>
+              <!-- WEAPONS -->
+              <div class="shop-item">
+                <div class="shop-item-photo" style="background-image: url('./images/bomb.jpg')"></div>
+                <p class="shop-item-text">Bomb</p>
+                <div class="stars">
+                  <i class="fas fa-star star-highlight"></i><i class="fas fa-star star-highlight"></i><i class="fas fa-star star-highlight"></i><i class="fas fa-star star-highlight"></i><i class="fas fa-star"></i>
+                </div>
+                <p><a href="./shop/weapons.html" class="category-label">Weapons</a></p>
+                <h1>$99.99</h1>
+                <a href="./shop/weapons/bomb.html"><button class="button" type="submit">Buy</button></a>
+              </div>
+              <div class="shop-item">
+                <div class="shop-item-photo" style="background-image: url('./images/flash.jpg')"></div>
+                <p class="shop-item-text">Flash</p>
+                <div class="stars">
+                  <i class="fas fa-star star-highlight"></i><i class="fas fa-star star-highlight"></i><i class="fas fa-star star-highlight"></i><i class="fas fa-star star-highlight"></i><i class="fas fa-star"></i>
+                </div>
+                <p><a href="./shop/weapons.html" class="category-label">Weapons</a></p>
+                <h1>$5.00</h1>
+                <a href="./shop/weapons/flash.html"><button class="button" type="submit">Buy</button></a>
+              </div>
+
+              <div id="barrier"></div>
+              <div id="no-results">
+                <p>
+                  No results found
+                  <br>
+                  <a onclick="clearSearch()">Clear search</a>
+                </p>
+              </div>
+              <span class="stretch"></span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Jianing Wang &copy; Copyright 2021. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Test Site | Shop</title>
+    <link rel="icon" href="../../images/testsite.png">
+    <link rel="stylesheet" href="../../style.css">
+    <script src="https://kit.fontawesome.com/e04d25e1ed.js" crossorigin="anonymous"></script>
+  </head>
+  <body onload="countReviews(); updateCost()">
+
+    <header>
+      <div class="container">
+        <div id="title">
+          <h1>
+            <a href="javascript: void(0);" class="menu-button" onclick="toggleMenu()"><span><i class="fas fa-bars"></i></span></a>
+            <a href="../../index.html"><span><i class="fas fa-vial"></i></span><span> T</span><span>e</span><span>s</span><span>t </span><span>S</span><span>i</span><span>t</span><span>e</span></a>
+          </h1>
+        </div>
+        <nav id="nav-buttons">
+          <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../shop.html" class="underline">Shop</a></li>
+            <li><a href="../../about.html">About</a></li>
+            <li><a href="../../contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="content">
+      <div class="container">
+        <div class="main-container">
+          <article id="main-col" class="shop-col">
+            <form action="../cart.html">
+              <button class="button" id="cart-button" type="submit"><i class="fas fa-shopping-cart"></i></button>
+            </form>
+            <p><button class="return-button" type="submit" onclick="history.back()"><i class="fas fa-angle-left"></i> Back</button></p>
+            <div class="shop-photo-container">
+              <a href="../../images/bomb.jpg" target="_blank"><div id="shop-photo" style="background-image: url('../../images/bomb.jpg')">
+                <p id="shop-photo-text">CLICK TO VIEW</p>
+              </div></a>
+            </div>
+            <div class="shop-description">
+              <h1>Bomb</h1>
+              <div class="stars">
+                <i class="fas fa-star star-highlight"></i><i class="fas fa-star star-highlight"></i><i class="fas fa-star star-highlight"></i><i class="fas fa-star star-highlight"></i><i class="fas fa-star"></i><span> (</span><span class="review-count">0</span><span>)</span>
+              </div>
+              <p class="category-label"><a href="../weapons.html" class="category-label">Weapons</a></p>
+              <h1 id="price"><span>$</span><span id="price-value">99.99</span></h1>
+              <hr>
+              <p>A sphere that detonates on impact.</p>
+            </div>
+          </article>
+          <article id="main-col">
+            <h1>
+              <span>Reviews (</span><span class="review-count">0</span><span>)</span>
+            </h1>
+            <div class="review">
+              <div class="profile-picture" style="background-color: var(--red)">
+                <i class="fas fa-user"></i>
+              </div>
+              <p class="profile-name">Obama Bin Laden</p>
+              <div class="stars">
+                <i class="fas fa-star star-highlight"></i><i class="fas fa-star star-highlight"></i><i class="fas fa-star star-highlight"></i><i class="fas fa-star star-highlight"></i><i class="fas fa-star"></i>
+              </div>
+              <h1>Very practical</h1>
+              <p class="review-text">Good for when I play first person shooters with my friends.</p>
+            </div>
+          </article>
+        </div>
+        <div class="sidebar-container">
+          <aside id="sidebar">
+            <h1>Order</h1>
+            <p id="quantity-text">Quantity</p>
+            <form class="quantity-form" action="../cart.html">
+              <div class="quantity-counter">
+                <button class="increment-button decrease" type="button" onclick="decrementQuantity('bomb'); updateCost()"><i class="fas fa-minus"></i></button>
+                <input class="quantity" id="quantity-bomb" type="number" value="1" min="1" oninput="updateCost()" required>
+                <button class="increment-button increase" type="button" onclick="incrementQuantity('bomb'); updateCost()"><i class="fas fa-plus"></i></button>
+              </div>
+              <p>Total</p>
+              <h1 id="total"><span>$</span><span id="total-cost">0.00</span></h1>
+              <button type="submit" disabled style="display: none" aria-hidden="true"></button>
+              <button id="bomb" class="button" type="submit" onclick="saveQuantity(this.id)"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+            </form>
+          </aside>
+          <aside id="sidebar">
+            <h1>Write a Review</h1>
+            <form>
+              <button type="submit" disabled style="display: none" aria-hidden="true"></button>
+              <div>
+                <button class="user-profile-picture" id="current-profile-picture" type="button" onclick="toggleProfileSelector()"><i class="fas fa-user"></i></button>
+                <div id="profile-selector">
+                  <button id="x-button" type="button" onclick="toggleProfileSelector()"><i class="fas fa-times"></i></button>
+                  <h1>Choose profile</h1>
+                  <div class="profile-container">
+                    <button class="user-profile-picture" id="profile-red" type="button" onclick="changeProfile(this.id)"><i class="fas fa-user"></i></button>
+                    <button class="user-profile-picture" id="profile-orange" type="button" onclick="changeProfile(this.id)"><i class="fas fa-user"></i></button>
+                    <button class="user-profile-picture" id="profile-yellow" type="button" onclick="changeProfile(this.id)"><i class="fas fa-user"></i></button>
+                  </div>
+                  <div class="profile-container">
+                    <button class="user-profile-picture" id="profile-green" type="button" onclick="changeProfile(this.id)"><i class="fas fa-user"></i></button>
+                    <button class="user-profile-picture" id="profile-blue" type="button" onclick="changeProfile(this.id)"><i class="fas fa-user"></i></button>
+                    <button class="user-profile-picture" id="profile-purple" type="button" onclick="changeProfile(this.id)"><i class="fas fa-user"></i></button>
+                  </div>
+                  <div class="profile-container">
+                    <button class="user-profile-picture" id="profile-darkGray" type="button" onclick="changeProfile(this.id)"><i class="fas fa-user"></i></button>
+                    <button class="user-profile-picture" id="profile-brown" type="button" onclick="changeProfile(this.id)"><i class="fas fa-user"></i></button>
+                    <button class="user-profile-picture" id="profile-gay" type="button" onclick="changeProfile(this.id)"><i class="fas fa-user"></i></button>
+                  </div>
+                </div>
+              </div>
+              <div class="user-profile-name-container">
+                <input id="user-profile-name" type="text" placeholder="Name" required>
+              </div>
+              <div class="star-rating-container">
+                <button class="star-rating" id="1" type="button" onclick="displayStars(this.id)" onmouseover="previewStars(this.id)" onmouseout="hideStars(this.id)"><i class="fas fa-star"></i></button>
+                <button class="star-rating" id="2" type="button" onclick="displayStars(this.id)" onmouseover="previewStars(this.id)" onmouseout="hideStars(this.id)"><i class="fas fa-star"></i></button>
+                <button class="star-rating" id="3" type="button" onclick="displayStars(this.id)" onmouseover="previewStars(this.id)" onmouseout="hideStars(this.id)"><i class="fas fa-star"></i></button>
+                <button class="star-rating" id="4" type="button" onclick="displayStars(this.id)" onmouseover="previewStars(this.id)" onmouseout="hideStars(this.id)"><i class="fas fa-star"></i></button>
+                <button class="star-rating" id="5" type="button" onclick="displayStars(this.id)" onmouseover="previewStars(this.id)" onmouseout="hideStars(this.id)"><i class="fas fa-star"></i></button>
+              </div>
+              <input class="text-box" type="text" placeholder="Title" required>
+              <textarea id="message" type="text" placeholder="Review" oninput='this.style.height = ""; this.style.height = this.scrollHeight + "px"' required></textarea>
+              <button class="button" type="submit">Post</button>
+            </form>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Jianing Wang &copy; Copyright 2021. All rights reserved.</p>
+    </footer>
+
+    <script src="../../main.js"></script>
+
+  </body>
+</html>
